@@ -1,4 +1,4 @@
-# Target Search
+## Target Search
 
 Target Search is a machine-learning workflow for accelerating geometry optimization of molecular structures.
 
