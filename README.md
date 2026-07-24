@@ -25,35 +25,23 @@ The trained model predicts the optimized energies of new initial structures, all
 In typical applications, only **10–30%** of all generated structures need to be optimized while maintaining excellent coverage of conformers within **20 kJ/mol above the global minimum**.
 
 # Ｗorkflow
-Generated initial structures
-            │
-            ▼
-Extract structural descriptors
-(dihedrals, puckering, ion coordination, ...)
-            │
-            ▼
-Training dataset
-Initial descriptors + Optimized energies
-            │
-            ▼
-Random Forest
-            │
-            ▼
-Predict optimized energies
-for unseen structures
-            │
-            ▼
-Rank candidates
-or classify low-energy structures
-            │
-            ▼
-Geometry optimization
-only for the top 10–30%
-            │
-            ▼
-Recover structures within
-GM + 20 kJ/mol
+```mermaid
+flowchart LR
+    A[Generated initial structures]
+    --> B[Extract structural descriptors]
 
+    B --> C[Training dataset<br/>Initial descriptors + Optimized energies]
+
+    C --> D[Random Forest]
+
+    D --> E[Predict optimized energies<br/>for unseen structures]
+
+    E --> F[Rank candidates<br/>or classify low-energy structures]
+
+    F --> G[Geometry optimization<br/>only for the top 10–30%]
+
+    G --> H[Recover structures within<br/>GM + 20 kJ/mol]
+```
 
 Reference:
 
