@@ -1,4 +1,4 @@
-### Target Search ###
+# Target Search
 
 Target Search is a machine-learning workflow for accelerating geometry optimization of molecular structures.
 
@@ -24,7 +24,7 @@ The trained model predicts the optimized energies of new initial structures, all
 
 In typical applications, only **10–30%** of all generated structures need to be optimized while maintaining excellent coverage of conformers within **20 kJ/mol above the global minimum**.
 
-# Ｗorkflow
+## Ｗorkflow
 ```mermaid
 flowchart LR
     A[Generated initial structures]
